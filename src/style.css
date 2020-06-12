@@ -1,0 +1,8 @@
+.flex--row{
+    display:flex;
+    flex-flow:row;
+}
+.half--screen{
+    height:100vh;
+    width:50vw;
+}

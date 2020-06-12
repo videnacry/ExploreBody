@@ -14,3 +14,54 @@
     top:0;
     left:0;
 }
+.absolute--middle{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%)
+}
+.mid--size{
+    width:70vw;
+    height:70vh;
+    z-index:2;
+}
+.big--size{
+    width:100vw;
+    height:100vh;
+    z-index:2;
+}
+
+
+
+.transparent-background{
+    position: absolute;
+    z-index:1;
+    width:100vw;
+    height:100vh;
+    background-color: aliceblue;
+    opacity:0.5;
+}
+.button-close{
+    z-index:2;
+    font-size:20px;
+    font-weight: bold;
+    text-align: center;
+    color:rgb(83, 91, 102);
+    width:3vw;
+    height: 3vw;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    border-color:white;
+    border-style: solid;
+    position: absolute;
+    top:3%;
+    right:2%;
+}
+.button-close:hover{
+    background-color: white;
+    cursor: pointer;
+}
+.button-close:focus{
+    outline: none;
+}

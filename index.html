@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html style="height: 100%; overflow: hidden;">
 <head>
+  <title>Explore body</title>
   <link href="src/style.css" rel="stylesheet">
 </head>
   <body style="height: 100%; margin: 0">
     <div class="flex--row">
-      <iframe id="myWidget"
-            src="https://human.biodigital.com/widget/?m=cochlear_implant&dk=6b061c11acab815dcd55db3cc18fb2b7798b3af2"
+      <div id="whole" class="half--screen absolute--left">
+      </div>
+      <iframe id="body-whole"
+            src="https://human.biodigital.com/viewer/?be=3Zh1&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&ui-tutorial=false&disable-scroll=false&dk=6b061c11acab815dcd55db3cc18fb2b7798b3af2"
             class="half--screen">
       </iframe>
-      <iframe id="myWidget"
+      <iframe id="body-part"
             src="https://human.biodigital.com/widget/?m=cochlear_implant&dk=6b061c11acab815dcd55db3cc18fb2b7798b3af2"
             class="half--screen">
       </iframe>
     </div>
     <script src="https://developer.biodigital.com/builds/api/2/human-api.min.js"></script>
+    <script src="src/script.js"></script>
   </body>
 </html>

@@ -6,3 +6,11 @@
     height:100vh;
     width:50vw;
 }
+.hide{
+    display:none;
+}
+.absolute--left{
+    position:absolute;
+    top:0;
+    left:0;
+}

@@ -12,11 +12,32 @@
           <h2 class="nav-title">Body Systems</h2>
           <div id="switch-gender"class=" return-parent">Female</div>
         </div>
+        <!--data-children contain the id of the ul that is going to show if clicked-->
         <ul id="systems" class="nav-tabs flex--row">
-          <li class="nav__left-tab">Somatic System</li>
-          <li class="nav-tab">Circulatory System</li>
-          <li class="nav-tab">Visceral System</li>
-          <li class="nav__right-tab">Nervous System</li>
+          <li class="nav__left-tab" data-children="somatic-system">Somatic System</li>
+          <li class="nav-tab" data-children="circulatory-system">Circulatory System</li>
+          <li class="nav-tab" data-children="visceral-system">Visceral System</li>
+          <li class="nav__right-tab" data-children="nervous-system">Nervous System</li>
+        </ul>
+        <ul id="somatic-system" class="nav-tabs flex--row minimize hide">
+          <li class="nav__left-tab third--width">Skeletal System</li>
+          <li class="nav-tab third--width">Muscular System</li>
+          <li class="nav__right-tab third--width">Connective Tissue</li>
+        </ul>
+        <ul id="circulatory-system" class="nav-tabs flex--row minimize hide">
+          <li class="nav__left-tab third--width">Cardiovascular System</li>
+          <li class="nav-tab third--width">Lymphatic System</li>
+          <li class="nav__right-tab third--width">Respiratory Tissue</li>
+        </ul>
+        <ul id="visceral-system" class="nav-tabs flex--row minimize hide">
+          <li class="nav__left-tab third--width">Digestive System</li>
+          <li class="nav-tab third--width">Reproductive System</li>
+          <li class="nav__right-tab third--width">Urinary Tissue</li>
+        </ul>
+        <ul id="nervous-system" class="nav-tabs flex--row minimize hide">
+          <li class="nav__left-tab third--width">Endocrine System</li>
+          <li class="nav-tab third--width">Nervous System</li>
+          <li class="nav__right-tab third--width">Auditory Tissue</li>
         </ul>
 
       </div>      
@@ -44,9 +65,45 @@
       <button class="enterOrgans" id="enter_Organs">ENTER</button>
     </div>
     <script src="https://developer.biodigital.com/builds/api/2/human-api.min.js"></script>
-    <div class="show__organs hide">
-      
-    </div>
+
+      <iframe src="https://human.biodigital.com/viewer/?m=production/maleAdult/heart_v02.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&ui-tutorial=false&disable-scroll=false&uaid=5mWX4"
+         class="heart">
+      </iframe>
+
+      <iframe id="Organs"
+         src="https://human.biodigital.com/viewer/?m=production/maleAdult/brain_v04.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&ui-tutorial=false&disable-scroll=false&uaid=5mWkC"
+         class="brain">
+      </iframe>
+
+      <iframe id="Organs"
+         src="https://human.biodigital.com/viewer/?m=production/maleAdult/eye_regional_anatomy_v02.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&ui-tutorial=false&disable-scroll=false&uaid=5mWrf"
+         class="eye">
+      </iframe>
+
+      <iframe id="Organs"
+         src="https://human.biodigital.com/viewer/?m=production/maleAdult/ear_cross_section_coronal.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&ui-tutorial=false&disable-scroll=false&uaid=5mWxN"
+         class="ear">
+      </iframe>
+
+      <iframe id="Organs"
+         src="https://human.biodigital.com/viewer/?m=production/maleAdult/tooth_cross_section.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&ui-tutorial=false&disable-scroll=false&uaid=5mX24"
+         class="tooth">
+      </iframe>
+
+      <iframe id="Organs"
+         src="https://human.biodigital.com/viewer/?m=production/maleAdult/alveoli_anatomy.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&ui-tutorial=false&disable-scroll=false&uaid=5mX7u"
+         class="alveoli">
+      </iframe>
+
+      <iframe id="Organs"
+         src="https://human.biodigital.com/viewer/?m=production/maleAdult/flu.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&ui-tutorial=false&disable-scroll=false&uaid=5mXEN"
+         class="nose">
+      </iframe>
+
+      <iframe id="Organs"
+         src="https://human.biodigital.com/viewer/?m=production/maleAdult/dry_skin.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&ui-tutorial=false&disable-scroll=false&uaid=5mXKl"
+         class="dryskin">
+      </iframe>
 
     <button class="home_refresh" id="go__home" onclick="returnHome()">HOME</button>
 

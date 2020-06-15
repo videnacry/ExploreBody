@@ -70,17 +70,116 @@ body{
     color: blue;
 }
 
-.show__organs{
+
+.heart{
     position: absolute;
-    height: 175px;
-    width: 175px;
-    top: 0%;
-    background-color: red;
+    display: none;
+    top: 10%;
+    left: 7%;
+    height: 200px;
+    width: 210px;
     border: 1px solid black;
-    z-index: 1;
 }
 
-.show__organs:hover{
+.heart:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.brain{
+    position: absolute;
+    display: none;
+    top: 10%;
+    left: 30%;
+    height: 200px;
+    width: 210px;
+    border: 1px solid black;
+}
+
+.brain:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.eye{
+    position: absolute;
+    display: none;
+    top: 10%;
+    left: 53%;
+    height: 200px;
+    width: 210px;
+    border: 1px solid black;
+}
+
+.eye:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.ear{
+    position: absolute;
+    display: none;
+    top: 10%;
+    left: 76%;
+    height: 200px;
+    width: 210px;
+    border: 1px solid black;
+}
+
+.ear:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.tooth{
+    position: absolute;
+    display: none;
+    top: 58%;
+    left: 7%;
+    height: 200px;
+    width: 210px;
+    border: 1px solid black;
+}
+
+.tooth:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.alveoli{
+    position: absolute;
+    display: none;
+    top: 58%;
+    left: 30%;
+    height: 200px;
+    width: 210px;
+    border: 1px solid black;
+}
+
+.alveoli:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nose{
+    position: absolute;
+    display: none;
+    top: 58%;
+    left: 53%;
+    height: 200px;
+    width: 210px;
+    border: 1px solid black;
+}
+
+.nose:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dryskin{
+    position: absolute;
+    display: none;
+    top: 58%;
+    left: 76%;
+    height: 200px;
+    width: 210px;
+    border: 1px solid black;
+}
+
+.dryskin:hover{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -112,6 +211,7 @@ body{
     height:100vh;
     z-index:2;
 }
+
 
 /*----------------------------------------------------------------header----------------------------------------------------------------------*/
 
@@ -163,6 +263,10 @@ body{
     padding-inline-start: unset;
     padding:10px 20px 15px 20px;
     margin:0;
+    box-sizing: border-box;
+    width:100%;
+    transition:width 0.5s, height 0.5s;
+    transition-timing-function: linear;
 }
 .return-parent{
     font-size:24px;
@@ -201,4 +305,12 @@ body{
 ul .background--blue:hover{
     background-color:rgb(115, 190, 255);
     color:white;
+}
+.third--width{
+    width:33.33%;
+}
+.minimize{
+    width:0;
+    height:0;
+    overflow: hidden;
 }

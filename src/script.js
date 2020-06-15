@@ -24,3 +24,13 @@ function hideAd(){
     closeAd.classList.add("hide")
 }
 let selectSystem = document.getElementById("select-system")
+let openWholeBody = document.getElementById("enter_HumanBody");
+let openOrgans = document.getElementById("enter_Organs");
+let body = document.getElementById("body-whole");
+let organs = document.getElementById("body-part")
+openWholeBody.addEventListener("click", function(){
+    body.style.width = "100%";
+});
+openOrgans.addEventListener("click", function(){
+    organs.style.width = "100%";
+})

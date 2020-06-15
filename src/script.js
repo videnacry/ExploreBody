@@ -5,6 +5,7 @@ goWhole.addEventListener("click",function(){
     part.classList.add("hide")
     goWhole.classList.add("hide")
     whole.style.width = "100vw"
+    selectSystem.classList.toggle("hide")
 })
 let adBackground = document.getElementById("ad-background")
 let ad = document.getElementById("ad")
@@ -22,3 +23,4 @@ function hideAd(){
     adBackground.classList.add("hide")
     closeAd.classList.add("hide")
 }
+let selectSystem = document.getElementById("select-system")

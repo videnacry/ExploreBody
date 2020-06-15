@@ -9,14 +9,23 @@
 
 .enterHumanBody{
     position: absolute;
+    top: 50%;
+    left: 20%;
+    height: 20px;
     background-color: white;
     color: black;
     border: 2px solid #e7e7e7;
     padding: 16px 32px;
     text-align: center;
-    top: 50%;
-    left: 20%;
-    height: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.enterHumanBody:hover{
+    background-color: #e7e7e7;
+    color: white;
 }
 
 .enterOrgans{
@@ -24,9 +33,23 @@
     top: 50%;
     left: 75%;
     height: 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
 
-.loco{
+.enterOrgans:hover{
+    background-color: #e7e7e7;
+    color: white;
+}
+
+.show__organs{
     position: absolute;
     height: 175px;
     width: 175px;
@@ -36,7 +59,7 @@
     z-index: 1;
 }
 
-.loco:hover{
+.show__organs:hover{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 

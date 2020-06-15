@@ -212,6 +212,7 @@ body{
     z-index:2;
 }
 
+
 /*----------------------------------------------------------------header----------------------------------------------------------------------*/
 
 .transparent-background{
@@ -262,6 +263,10 @@ body{
     padding-inline-start: unset;
     padding:10px 20px 15px 20px;
     margin:0;
+    box-sizing: border-box;
+    width:100%;
+    transition:width 0.5s, height 0.5s;
+    transition-timing-function: linear;
 }
 .return-parent{
     font-size:24px;
@@ -300,4 +305,12 @@ body{
 li .background--blue:hover{
     background-color:rgb(60, 160, 250);
     color:white;
+}
+.third--width{
+    width:33.33%;
+}
+.minimize{
+    width:0;
+    height:0;
+    overflow: hidden;
 }

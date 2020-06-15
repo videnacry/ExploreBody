@@ -12,11 +12,32 @@
           <h2 class="nav-title">Body Systems</h2>
           <div id="switch-gender"class=" return-parent">Female</div>
         </div>
-        <ul class="nav-tabs flex--row">
-          <li class="nav__left-tab">Somatic System</li>
-          <li class="nav-tab">Circulatory System</li>
-          <li class="nav-tab">Visceral System</li>
-          <li class="nav__right-tab">Nervous System</li>
+        <!--data-children contain the id of the ul that is going to show if clicked-->
+        <ul id="systems" class="nav-tabs flex--row">
+          <li class="nav__left-tab" data-children="somatic-system">Somatic System</li>
+          <li class="nav-tab" data-children="circulatory-system">Circulatory System</li>
+          <li class="nav-tab" data-children="visceral-system">Visceral System</li>
+          <li class="nav__right-tab" data-children="nervous-system">Nervous System</li>
+        </ul>
+        <ul id="somatic-system" class="nav-tabs flex--row minimize hide">
+          <li class="nav__left-tab third--width">Skeletal System</li>
+          <li class="nav-tab third--width">Muscular System</li>
+          <li class="nav__right-tab third--width">Connective Tissue</li>
+        </ul>
+        <ul id="circulatory-system" class="nav-tabs flex--row minimize hide">
+          <li class="nav__left-tab third--width">Cardiovascular System</li>
+          <li class="nav-tab third--width">Lymphatic System</li>
+          <li class="nav__right-tab third--width">Respiratory Tissue</li>
+        </ul>
+        <ul id="visceral-system" class="nav-tabs flex--row minimize hide">
+          <li class="nav__left-tab third--width">Digestive System</li>
+          <li class="nav-tab third--width">Reproductive System</li>
+          <li class="nav__right-tab third--width">Urinary Tissue</li>
+        </ul>
+        <ul id="nervous-system" class="nav-tabs flex--row minimize hide">
+          <li class="nav__left-tab third--width">Endocrine System</li>
+          <li class="nav-tab third--width">Nervous System</li>
+          <li class="nav__right-tab third--width">Auditory Tissue</li>
         </ul>
       </div>      
     </div>

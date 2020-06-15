@@ -51,7 +51,7 @@ function returnHome(){
 }
 let selectSystem = document.getElementById("select-system")
 let systemTabs = selectSystem.querySelectorAll("#systems li")
-let sex = ""
+let sex = "male"
 let urls = {
     male:{
         muscular:"https://human.biodigital.com/viewer/?m=production/maleAdult/male_system_anatomy_muscular_09.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&ui-tutorial=false&disable-scroll=false&dk=6b061c11acab815dcd55db3cc18fb2b7798b3af2",
@@ -109,8 +109,24 @@ gender.addEventListener("click",function(){
         change("Male","https://human.biodigital.com/viewer/?be=3Zhm&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&ui-tutorial=false&disable-scroll=false&dk=6b061c11acab815dcd55db3cc18fb2b7798b3af2")
     }
     function change(gender,url){
-        sex=gender
+        sex=gender.toLowerCase()
         target.textContent=gender
         document.getElementById("body-whole").src=url
     }
+})
+let systemsChildren = document.querySelectorAll("#children li")
+let selectedChild
+systemsChildren.forEach(function(child){
+    child.addEventListener("click",function(){
+        if(selectedChild!=undefined){
+            selectedChild.classList.toggle("background--blue")
+        }
+        selectedChild = event.target
+        selectedChild.classList.toggle("background--blue")
+        whole.src=urls[sex][selectedChild.dataset.url]
+        showedOptions.classList.toggle("minimize")
+        setTimeout(function(){
+            showedOptions.classList.toggle("hide")
+        },500)
+    })
 })

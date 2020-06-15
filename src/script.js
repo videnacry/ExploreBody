@@ -48,10 +48,15 @@ function returnHome(){
     location.reload();
 }
 let selectSystem = document.getElementById("select-system")
-let systemTabs = selectSystem.querySelectorAll(".nav-tabs li")
+let systemTabs = selectSystem.querySelectorAll("#systems li")
+let selectedSystem
 systemTabs.forEach(function(tab){
     tab.addEventListener("click",function(){
-        event.target.classList.toggle("background--blue")
+        if(selectedSystem!=undefined){
+            selectedSystem.classList.toggle("background--blue")
+        }
+        selectedSystem = event.target
+        selectedSystem.classList.toggle("background--blue")
     })
 })
 let gender = document.getElementById("switch-gender")

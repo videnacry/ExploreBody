@@ -198,7 +198,7 @@ body{
     background-color:rgb(60, 160, 250);
     color:white;
 }
-li .background--blue:hover{
-    background-color:rgb(60, 160, 250);
+ul .background--blue:hover{
+    background-color:rgb(115, 190, 255);
     color:white;
 }

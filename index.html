@@ -10,7 +10,7 @@
         <div class="nav flex--row space--between">
           <div class="return-parent">&lt; Return</div>
           <h2 class="nav-title">Body Systems</h2>
-          <div class="switch-gender return-parent">Male</div>
+          <div id="switch-gender"class=" return-parent">Female</div>
         </div>
         <ul class="nav-tabs flex--row">
           <li class="nav__left-tab">Somatic System</li>
@@ -37,13 +37,14 @@
       </iframe>
       <button class="enterHumanBody" id="enter_HumanBody">ENTER</button>
       <iframe id="body-part"
-            src="https://human.biodigital.com/widget/?m=cochlear_implant&dk=6b061c11acab815dcd55db3cc18fb2b7798b3af2"
+            src="https://human.biodigital.com/viewer/?m=production/maleAdult/brain_v04.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&ui-tutorial=false&disable-scroll=false&dk=6b061c11acab815dcd55db3cc18fb2b7798b3af2"
             class="half--screen">
       </iframe>
       <button class="enterOrgans" id="enter_Organs">ENTER</button>
     </div>
     <script src="https://developer.biodigital.com/builds/api/2/human-api.min.js"></script>
-    <div class="show__organs hide">  
+    <div class="show__organs hide">
+      
     </div>
 
     <button class="home_refresh" id="go__home" onclick="returnHome()">HOME</button>

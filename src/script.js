@@ -30,7 +30,8 @@ let body = document.getElementById("body-whole");
 let organs = document.getElementById("body-part")
 openWholeBody.addEventListener("click", function(){
     body.style.width = "100%";
+    organs.style.display = "none";
 });
 openOrgans.addEventListener("click", function(){
-    organs.style.width = "100%";
+    organs.style.width = "300%";
 })

@@ -29,7 +29,7 @@ let openOrgans = document.getElementById("enter_Organs");
 let body = document.getElementById("body-whole");
 let organs = document.getElementById("body-part")
 let homeBTN = document.getElementById("go__home");
-let showOrgans = document.getElementById("Organs")
+let showOrgans = document.querySelectorAll("#Organs")
 openWholeBody.addEventListener("click", function(){
     body.style.width = "100%";
     organs.style.display = "none";

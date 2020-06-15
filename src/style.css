@@ -1,6 +1,13 @@
+body{
+    font-family:sans-serif;
+    font-size:12px;
+}
 .flex--row{
     display:flex;
     flex-flow:row;
+}
+.space--between{
+    justify-content: space-between;
 }
 .half--screen{
     height:100vh;
@@ -92,6 +99,8 @@
     z-index:2;
 }
 
+/*----------------------------------------------------------------header----------------------------------------------------------------------*/
+
 .transparent-background{
     position: absolute;
     z-index:1;
@@ -126,4 +135,45 @@
 
 .button-close:focus{
     outline: none;
+}
+
+.header{
+    background-color: rgb(248, 245, 255);
+}
+.nav{
+    padding:30px 10px 0 10px;
+}
+.nav-tabs{
+    cursor:pointer;
+    list-style:none;
+    padding-inline-start: unset;
+    padding:10px 20px 15px 20px;
+    margin:0;
+}
+.return-parent{
+    font-size:24px;
+    cursor:pointer;
+}
+.return-parent,.nav-tab, .nav__left-tab, .nav__right-tab{
+    color: rgb(60, 160, 250);
+}
+.nav-tab, .nav__left-tab, .nav__right-tab{
+    font-weight:bold;
+    text-align: center;
+    width:25%;
+    padding:5px 0;
+    border-top-style:solid;
+    border-bottom-style: solid;
+    border-right-style:solid;
+    border-color:  rgb(0, 120, 255);
+    border-width: 1.4px;
+}
+.nav__left-tab{
+    border-left-style:solid;
+    border-bottom-left-radius:5px;
+    border-top-left-radius:5px;
+}
+.nav__right-tab{
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
 }

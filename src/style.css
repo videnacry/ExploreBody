@@ -26,13 +26,14 @@ body{
     text-align: center;
     text-decoration: none;
     font-size: 16px;
+    opacity: 0.5;
     transition-duration: 0.4s;
     cursor: pointer;
 }
 
 .enterHumanBody:hover{
     background-color: #e7e7e7;
-    color: white;
+    color: black;
 }
 
 .enterOrgans{
@@ -47,13 +48,26 @@ body{
     text-align: center;
     text-decoration: none;
     font-size: 16px;
+    opacity: 0.5;
     transition-duration: 0.4s;
     cursor: pointer;
 }
 
 .enterOrgans:hover{
     background-color: #e7e7e7;
-    color: white;
+    color: black;
+}
+
+.home_refresh{
+    position: absolute;
+    display: none;
+    top: 95%;
+    left: 3%;
+    z-index: 1;
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    color: blue;
 }
 
 .show__organs{
@@ -176,4 +190,15 @@ body{
 .nav__right-tab{
     border-top-right-radius:5px;
     border-bottom-right-radius:5px;
+}
+.return-parent:hover,.nav-tab:hover, .nav__left-tab:hover, .nav__right-tab:hover{
+    color: rgb(115, 190, 255);
+}
+.background--blue{
+    background-color:rgb(60, 160, 250);
+    color:white;
+}
+li .background--blue:hover{
+    background-color:rgb(60, 160, 250);
+    color:white;
 }

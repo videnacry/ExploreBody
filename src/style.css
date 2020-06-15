@@ -16,14 +16,24 @@ body{
 
 .enterHumanBody{
     position: absolute;
+    top: 50%;
+    left: 20%;
+    height: 20px;
     background-color: white;
     color: black;
     border: 2px solid #e7e7e7;
     padding: 16px 32px;
     text-align: center;
-    top: 50%;
-    left: 20%;
-    height: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    opacity: 0.5;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.enterHumanBody:hover{
+    background-color: #e7e7e7;
+    color: black;
 }
 
 .enterOrgans{
@@ -31,9 +41,36 @@ body{
     top: 50%;
     left: 75%;
     height: 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    opacity: 0.5;
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
 
-.loco{
+.enterOrgans:hover{
+    background-color: #e7e7e7;
+    color: black;
+}
+
+.home_refresh{
+    position: absolute;
+    display: none;
+    top: 95%;
+    left: 3%;
+    z-index: 1;
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    color: blue;
+}
+
+.show__organs{
     position: absolute;
     height: 175px;
     width: 175px;
@@ -43,7 +80,7 @@ body{
     z-index: 1;
 }
 
-.loco:hover{
+.show__organs:hover{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -153,4 +190,15 @@ body{
 .nav__right-tab{
     border-top-right-radius:5px;
     border-bottom-right-radius:5px;
+}
+.return-parent:hover,.nav-tab:hover, .nav__left-tab:hover, .nav__right-tab:hover{
+    color: rgb(115, 190, 255);
+}
+.background--blue{
+    background-color:rgb(60, 160, 250);
+    color:white;
+}
+li .background--blue:hover{
+    background-color:rgb(60, 160, 250);
+    color:white;
 }

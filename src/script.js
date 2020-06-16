@@ -59,11 +59,6 @@ function returnHome(){
 
 let selectSystem = document.getElementById("select-system");
 let systemTabs = selectSystem.querySelectorAll("#systems li");
-systemTabs.forEach(function(tab){
-    tab.addEventListener("click",function(){
-        event.target.classList.toggle("background--blue");
-    })
-})
 let sex = "male"
 let urls = {
     male:{

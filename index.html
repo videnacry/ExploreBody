@@ -12,12 +12,36 @@
           <h2 class="nav-title">Body Systems</h2>
           <div id="switch-gender"class=" return-parent">Female</div>
         </div>
-        <ul class="nav-tabs flex--row">
-          <li class="nav__left-tab">Somatic System</li>
-          <li class="nav-tab">Circulatory System</li>
-          <li class="nav-tab">Visceral System</li>
-          <li class="nav__right-tab">Nervous System</li>
+        <!--data-children contain the id of the ul that is going to show if clicked-->
+        <ul id="systems" class="nav-tabs flex--row">
+          <li class="nav__left-tab" data-children="somatic-system">Somatic System</li>
+          <li class="nav-tab" data-children="circulatory-system">Circulatory System</li>
+          <li class="nav-tab" data-children="visceral-system">Visceral System</li>
+          <li class="nav__right-tab" data-children="nervous-system">Nervous System</li>
         </ul>
+        <div id="children">
+          <ul id="somatic-system" class="nav-tabs flex--row minimize hide">
+            <li class="nav__left-tab third--width" data-url="skeletal">Skeletal System</li>
+            <li class="nav-tab third--width" data-url="muscular">Muscular System</li>
+            <li class="nav__right-tab third--width" data-url="connective">Connective Tissue</li>
+          </ul>
+          <ul id="circulatory-system" class="nav-tabs flex--row minimize hide">
+            <li class="nav__left-tab third--width" data-url="cardiovascular">Cardiovascular System</li>
+            <li class="nav-tab third--width" data-url="lymphatic">Lymphatic System</li>
+            <li class="nav__right-tab third--width" data-url="respiratory">Respiratory Tissue</li>
+          </ul>
+          <ul id="visceral-system" class="nav-tabs flex--row minimize hide">
+            <li class="nav__left-tab third--width" data-url="digestive">Digestive System</li>
+            <li class="nav-tab third--width" data-url="reproductive">Reproductive System</li>
+            <li class="nav__right-tab third--width" data-url="urinary">Urinary Tissue</li>
+          </ul>
+          <ul id="nervous-system" class="nav-tabs flex--row minimize hide">
+            <li class="nav__left-tab third--width" data-url="endocrine">Endocrine System</li>
+            <li class="nav-tab third--width" data-url="nervous">Nervous System</li>
+            <li class="nav__right-tab third--width" data-url="auditory">Auditory Tissue</li>
+          </ul>
+        </div>
+
       </div>      
     </div>
     <div id="ad-background" class="transparent-background"></div>

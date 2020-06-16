@@ -130,3 +130,11 @@ systemsChildren.forEach(function(child){
         },500)
     })
 })
+let returnParent = document.getElementById("return-index")
+returnParent.addEventListener("click",function(){
+    whole.style="50vw"
+    whole.style="100vh"
+    goWhole.classList.remove("hide")
+    part.classList.remove("hide")
+    selectSystem.classList.add("hide")
+})

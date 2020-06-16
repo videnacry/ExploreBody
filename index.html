@@ -4,7 +4,7 @@
   <title>Explore body</title>
   <link href="src/style.css" rel="stylesheet">
 </head>
-  <body style="height: 100%; margin: 0">
+  <body>
     <div class="header">
       <div id="select-system" class="hide">
         <div class="nav flex--row space--between">
@@ -12,14 +12,16 @@
           <h2 class="nav-title">Body Systems</h2>
           <div id="switch-gender"class=" return-parent">Female</div>
         </div>
-        <!--data-children contain the id of the ul that is going to show if clicked-->
+        <!--attribute "data-children" contains the id of the ul that is going to show if clicked-->
         <ul id="systems" class="nav-tabs flex--row">
           <li class="nav__left-tab" data-children="somatic-system">Somatic System</li>
           <li class="nav-tab" data-children="circulatory-system">Circulatory System</li>
           <li class="nav-tab" data-children="visceral-system">Visceral System</li>
           <li class="nav__right-tab" data-children="nervous-system">Nervous System</li>
         </ul>
+        <!--div with id children contains the tabs for navigation through the body systems-->
         <div id="children">
+          <!--attribute data-url is used to get the url from an object in script.js-->
           <ul id="somatic-system" class="nav-tabs flex--row minimize hide">
             <li class="nav__left-tab third--width" data-url="skeletal">Skeletal System</li>
             <li class="nav-tab third--width" data-url="muscular">Muscular System</li>
@@ -44,30 +46,39 @@
 
       </div>      
     </div>
+    <!--div with id "ad-background" is used to generate the event of click  over the iframe to show it in big size and git a nav-->
     <div id="ad-background" class="transparent-background"></div>
+    <!--iframe with id "corona-tour" is an ad wich is showed when the page is open or reload-->
     <iframe id="corona-tour"
     src="https://human.biodigital.com/viewer/?m=production/maleAdult/coronavirus_attacks_airway_cell_tour_labeled.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&ui-tutorial=false&disable-scroll=false&dk=6b061c11acab815dcd55db3cc18fb2b7798b3af2"
     class="mid--size absolute--middle"
     >
     </iframe>
+    <!--div with id "ad" is used to generate the event to make the ad bigger once clicked so it takes all the screen-->
     <div id="ad" class="mid--size absolute--middle"></div>
+    <!--button with id="close-ad" have the event to close the ad-->
     <button id="close-ad" class="button-close">x</button>
-    <div class="flex--row">
+    <!--div wich stores the two sections representatives, for body systems, and body organs-->
+    <div id="screen-content" class="flex--row">
       <div id="whole" class="half--screen absolute--left">
       </div>
+      <!--iframe with id "body-whole" is an iframe wich shows a whole male body and then change its content pending on the nav of systems-->
       <iframe id="body-whole"
             src="https://human.biodigital.com/viewer/?be=3Zh1&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&ui-tutorial=false&disable-scroll=false&dk=6b061c11acab815dcd55db3cc18fb2b7798b3af2"
             class="half--screen">
       </iframe>
+      <!--button with id "enter_HumanBody" make the iframe of whole male body takes all the screen for him and show a link to refresh the page-->
       <button class="enterHumanBody" id="enter_HumanBody">ENTER</button>
+      <!--iframe with id "body-part" show an organ of the human body-->
       <iframe id="body-part"
             src="https://human.biodigital.com/viewer/?m=production/maleAdult/brain_v04.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&ui-tutorial=false&disable-scroll=false&dk=6b061c11acab815dcd55db3cc18fb2b7798b3af2"
             class="half--screen">
       </iframe>
+      <!--button with id "enter_Organs" replace the two initial iframes by 8 iframes each one of them with a human organ-->      
       <button class="enterOrgans" id="enter_Organs">ENTER</button>
     </div>
     <script src="https://developer.biodigital.com/builds/api/2/human-api.min.js"></script>
-
+      <!--iframes with id "organs" show each one of them a different organ-->
       <iframe id="Organs"
          src="https://human.biodigital.com/viewer/?m=production/maleAdult/heart_v02.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&ui-tutorial=false&disable-scroll=false&uaid=5mWX4"
          class="heart">
@@ -107,7 +118,8 @@
          src="https://human.biodigital.com/viewer/?m=production/maleAdult/dry_skin.json&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&ui-tutorial=false&disable-scroll=false&uaid=5mXKl"
          class="dryskin">
       </iframe>
-
+      
+    <!--button with id "home_refresh" is shown as a link wich reloads the page-->
     <button class="home_refresh" id="go__home" onclick="returnHome()">HOME</button>
 
     <script src="src/script.js"></script>

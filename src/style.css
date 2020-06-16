@@ -1,7 +1,11 @@
+/*Initial css style*/
 body{
     font-family:sans-serif;
     font-size:12px;
+    height:100%;
+    margin:0;
 }
+/*Clases in the form [name--lastname] are for especific styles wich every html element can have*/
 .flex--row{
     display:flex;
     flex-flow:row;
@@ -320,4 +324,29 @@ ul .background--blue:hover{
     width:0;
     height:0;
     overflow: hidden;
+}
+
+/*---------------------------------------------Media query--------------------------------------------------------*/
+@media screen and (max-width:600px){
+    #screen-content{
+        flex-flow:column;
+    }
+    #screen-content .half--screen{
+        height:50vh;
+        width:100vw;
+    }
+    
+}
+
+@media screen and (max-width:500px){
+    .mid--size{
+        width:90vw;
+    }
+    
+}
+
+@media screen and (max-width:380px){
+    .mid--size{
+        width:100vw;
+    }
 }

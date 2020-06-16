@@ -1,6 +1,8 @@
+//----------------------------------------------variables to play with the initial iframes-----------------------------------------------------------------
 let goWhole = document.getElementById("whole");
 let whole = document.getElementById("body-whole");
 let part = document.getElementById("body-part");
+//--------------------------event to show a nav to go through the body systems, hide the organ iframe and make bigger the other iframe----------------------
 goWhole.addEventListener("click",function(){
     part.classList.add("hide");
     goWhole.classList.add("hide");
@@ -8,10 +10,12 @@ goWhole.addEventListener("click",function(){
     whole.style.height = "75vh";
     selectSystem.classList.toggle("hide");
 });
+//-----------------------------variables to play with the ad shown at first when opening or reloading the page----------------------------------------------
 let adBackground = document.getElementById("ad-background");
 let ad = document.getElementById("ad");
 let coronaTour = document.getElementById("corona-tour");
 let closeAd = document.getElementById("close-ad");
+//--------------------------------------event to hide the add if clicked the button "closeAd" or outside the ad----------------------------------------------
 adBackground.addEventListener("click",hideAd);
 ad.addEventListener("click",function(){
     coronaTour.classList.add("big--size");
@@ -56,9 +60,10 @@ function returnHome(){
     location.reload();
 }
 
-
+//---------------------------------------variables to play with the nav of body systems parent--------------------------------------------------------
 let selectSystem = document.getElementById("select-system");
 let systemTabs = selectSystem.querySelectorAll("#systems li");
+//-----------------------------------variables to deide wich url is going to be used in the iframe wholeBody------------------------------------------
 let sex = "male"
 let urls = {
     male:{
@@ -92,6 +97,8 @@ let urls = {
 }
 let selectedSystem
 let showedOptions
+/*event per tab in the first nav to change style of the clicked one and the clicked before so only one has a different style in the nav
+ and hide the children shown to show the children of the tab clicked*/
 systemTabs.forEach(function(tab){
     tab.addEventListener("click",function(){
         if(showedOptions!=undefined){
@@ -107,6 +114,7 @@ systemTabs.forEach(function(tab){
         },50)
     })
 })
+//-----------------------variable of a link with a event to change the gender of the body shown once clicked (changing the url)-----------------------
 let gender = document.getElementById("switch-gender");
 gender.addEventListener("click",function(){
     let target = event.target;
@@ -122,8 +130,11 @@ gender.addEventListener("click",function(){
         document.getElementById("body-whole").src=url
     }
 })
+//---------------------variable of the systems in the children div whose are shown once clicked their respective parent--------------------------------
 let systemsChildren = document.querySelectorAll("#children li")
+//----------------------------------------------------------variable of the system clicked-------------------------------------------------------------
 let selectedChild
+//-------------------------event per system so it changes the styles of him and the last clicked, and change the url of the iframe---------------------
 systemsChildren.forEach(function(child){
     child.addEventListener("click",function(){
         if(selectedChild!=undefined){
@@ -138,6 +149,7 @@ systemsChildren.forEach(function(child){
         },500)
     })
 })
+//-------------variable of a link, which get the event to return to the last stage, so when the screen were divided by two iframes----------------------
 let returnParent = document.getElementById("return-index")
 returnParent.addEventListener("click",function(){
     whole.style="50vw"
